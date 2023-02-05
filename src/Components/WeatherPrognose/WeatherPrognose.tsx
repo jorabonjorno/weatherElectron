@@ -4,11 +4,10 @@ import Weather from "../Weather/Weather";
 
 import {getResponse} from "../api/api";
 import {randomCity} from "../../helpers/randomCity";
-import {IWeather} from "../../types/InterfaceWeather";
 
 const WeatherPrognose:React.FC = () => {
     const [inputValue, setInputValue] = React.useState<string>("");
-    const [weatherData, setWeatherData] = React.useState<IWeather | null>(null);
+    const [weatherData, setWeatherData] = React.useState(null);
 
     const getWeather = async () => {
       const result = await getResponse(inputValue)
