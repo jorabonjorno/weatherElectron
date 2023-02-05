@@ -1,17 +1,17 @@
 import anime from 'animejs/lib/anime.es.js';
 import React, {useEffect, useState} from "react";
 import WeatherPrognose from "../WeatherPrognose/WeatherPrognose";
-import stars from "../../assets/stars.png";
-import moon from "../../assets/moon.png";
-import mountains_behind from "../../assets/mountains_behind.png";
-import mountains_front from "../../assets/mountains_front.png";
+import stars from "./assets/stars.png";
+import moon from "./assets/moon.png";
+import mountains_behind from "./assets/mountains_behind.png";
+import mountains_front from "./assets/mountains_front.png";
 import './StartPage.css';
 
 const StartPage:React.FC = () => {
     const [state, setState] = useState(false)
 
     useEffect(() => {
-        var animation = anime.timeline({
+        let animation = anime.timeline({
             autoplay: false,
         });
         animation.add({

@@ -29,31 +29,10 @@ export const rules: Required<ModuleOptions>['rules'] = [
     },
   },
   {
-    test: /\.(png$|gif)$/i,
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'assets/images/',
-          publicPath: 'assets/images/'
-        }
-      },
-      {
-        loader: 'image-webpack-loader',
-        options: {
-          mozjpeg: {
-            progressive: true,
-          },
-          optipng: {
-            enabled: false,
-          },
-          pngquant: {
-            quality: [0.65, 0.90],
-            speed: 4
-          },
-        }
-      },
-    ],
-  },
+    test: /\.(png|svg)$/,
+    loader: 'file-loader',
+    options: {
+      name: 'assets/[name].[ext]',
+    }
+  }
 ];
